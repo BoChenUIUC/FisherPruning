@@ -8,7 +8,7 @@ optimizer = dict(lr=0.01)
 custom_hooks = [
     dict(type='FisherPruningHook',
          pruning=False,
-         deploy_from='path to the pruned model')
+         deploy_from='work_dir/flops_50_acts_64.pth')
 ]
 #
 model = dict(backbone=dict(frozen_stages=-1, ))
